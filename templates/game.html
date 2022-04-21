@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	body {background-color: #2a2727;}
+	.text {color: white; font-size: 20px;}
+	.button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 20px;
+  }
+
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    font-size: 20px;
+  }
+	h4 {
+		font-size: 35px;
+    color: white;
+	}
+	.indent {
+		margin-left: 75px;
+	}
+	</style>
+	<title>Imposter Game</title>
+</head>
+<body>
+	<div class="indent">
+  <h4>All people</h4>
+	{% for line in lines %}
+	<p class="text">{{line}}</p>
+	{% endfor %}
+  <hr>
+	<h4>Who is the imposter?</h4>
+	{% for person in people %}
+	<button class="button" onclick="window.location.href='/guess/{{person['Name']}}';">{{person['Name']}}</button>
+
+	{% endfor %}
+	</div>
+</body>

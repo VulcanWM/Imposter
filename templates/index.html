@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Imposter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          {% if cookie == False %}
+            <h4><a href="/">Home</a></h4>
+            <h4><a href="/login">Login</a></h4>
+            <h4><a href="/signup">Signup</a></h4>
+          {% else %}
+            <h4>{{cookie}}</h4>
+            <h4><a href="/">Home</a></h4>
+            <h4><a href="/game">Play</a></h4>
+            <h4><a href="/profile">Profile</a></h4>
+            <h4><a href="/logout">Logout</a></h4>
+          {% endif %}
+          <!-- <span class="text-muted">Toggleable via the navbar brand.</span> -->
+        </div>
+      </div>
+      {% if success != None and success != False and success != ""%}
+        <div class="alert alert-success" role="alert">
+          {{success}}
+        </div>
+      {% endif %}
+      {% if danger != None and danger != False and danger != ""%}
+        <div class="alert alert-danger" role="alert">
+          {{danger}}
+        </div>
+      {% endif %}
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1>Imposter</h1>
+      </nav>
+    </div>
+    <p>Imposter is a game in which one of the four students in your online lesson chat is an imposter and you have to figure out who by using their personality and what they have texted.</p>
+    <br>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<style>
+body {
+  background-color: #2a2727;
+  color: white;
+}
+
+p{
+  margin-top: 10px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+
+a {
+  margin-top: 10px;
+  margin-right: 80px;
+  margin-left: 80px;
+}
+</style>

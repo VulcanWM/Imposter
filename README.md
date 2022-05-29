@@ -5,3 +5,7 @@ Imposter is a game where you are in a chatroom with 4 people from your class, an
 **Can you figure out who the imposter is?**
 
 Click [here](https://Imposter.vulcanwm.repl.co) to play!
+
+---
+
+Made by [VulcanWM](https://vulcanwm.is-a.dev)
